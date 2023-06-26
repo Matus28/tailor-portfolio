@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import "../styles/globals.css";
-import Footer from "@/components/Container/Footer/Footer";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: {
