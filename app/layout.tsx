@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { Comfortaa } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
 import "../styles/globals.css";
+import Footer from "@/components/Container/Footer/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={comfortaa.className} suppressHydrationWarning>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
