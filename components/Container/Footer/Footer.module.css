@@ -2,8 +2,6 @@
   width: 100%;
   background-color: var(--background-color);
   z-index: 100;
-  display: flex;
-  justify-content: center;
 }
 
 .wrapper {
