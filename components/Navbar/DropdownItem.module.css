@@ -1,0 +1,22 @@
+.link {
+  composes: link from "./Navitem.module.css";
+  margin-left: 1rem;
+}
+
+.link:nth-child(1) {
+  margin-top: 1rem;
+}
+
+.link::before {
+  content: "";
+  height: 0;
+  width: 3px;
+  background-color: var(--text-color);
+  bottom: 0;
+  left: -10px;
+}
+
+.link:hover::before {
+  height: 100%;
+  width: 3px;
+}

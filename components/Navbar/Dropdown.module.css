@@ -1,0 +1,76 @@
+.link {
+  composes: link from "./Navitem.module.css";
+}
+
+.link.active::before {
+  width: 100%;
+}
+
+.link.active {
+  font-weight: 800;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  z-index: 2;
+}
+
+.container {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  row-gap: 1rem;
+  height: 0;
+  width: 170px;
+  background-color: pink;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.dropdown.active {
+  row-gap: 1rem;
+}
+
+.dropdown.active > .container {
+  height: 220px;
+  min-height: 220px;
+}
+
+.dropdown::after {
+  content: "";
+  background-image: url("../../public/arrow-down.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -2px;
+  right: -28px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.dropdown:hover:after {
+  transform: scale(1.3);
+}
+
+.dropdown.active::after {
+  transform: rotate(180deg) scale(1.3);
+}
+
+@media (max-width: 768px) {
+  .container {
+    position: relative;
+    top: 0;
+  }
+
+  .dropdown::after {
+    top: -5px;
+    right: 0;
+  }
+}
